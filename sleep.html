@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+<script>
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function doSomething(JSX = document.body) {
+  JSX.innerHTML += `<h1>Good Night!</h1>`;
+  await sleep(2000);
+  JSX.innerHTML += `
+  <h1><mark>Shine & rise</mark>, sleepy head!</h1>
+  `;
+  return 5;
+} doSomething().then(v => alert(v));
+</script>
+
+</body>
+</html>
